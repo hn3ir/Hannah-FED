@@ -1,0 +1,29 @@
+body {
+    padding-top: 70px;
+}
+
+.jumbotron {
+    color: rgb(229, 32, 236);
+    background:url(https://cdn.filestackcontent.com/M8j9MYDRoih9zk5N7CQo/convert?cache=true&crop=1%2C56%2C1543%2C772);
+    background-position: center;
+    background-size: cover;
+    .link { color: #FF0000; } /* CSS link color (red) */
+}
+
+.navbar-inverse {
+    background: rgb(78, 60, 156);
+   
+}
+
+.navbar-inverse .navbar-nav>li>a {
+    color: white;
+}
+
+.navbar-inverse .navbar-brand{
+    color: white;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
