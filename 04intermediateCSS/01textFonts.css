@@ -1,0 +1,86 @@
+/* font family
+=if a font name has a number in the beginning, you have to put quotes around it; otherwise not necessarily but still valid */
+
+h1 {
+    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+    font-family: 'Hepta Slab', serif;
+}
+
+p {
+    font-family: 'Hepta Slab', serif;
+}
+
+/* font size 
+- controls how big or small the font is 
+- <span> is simply an HTML element that groups text together 
+- how to change font size
+    - px
+    - relative units (size is dynamic)
+        - em - equal to the size of the font that applies to the parent of the element in question
+        - rem - equal to the size of the root element. (1 rem = 16px)
+          - if root element is 16px, then 1 rem = 16px for all elements in question
+          - if font size is not explicity define in root element, then 1 rem will equal to the default font size provided by the browser (usually always 16 px)
+*/
+
+body {
+    font-size: 10px; 
+}
+
+h1 {
+    /* font-size: 50px; */
+    font-size: 5.0em;
+}
+
+p {
+    font-size: 1.5em;
+    /* font-size: 25px; */
+}
+
+span {
+    font-size: 1.5em;
+}
+
+
+/* font-weight
+    - refers to how bold or lightweight (thick/thin) the text is
+    - certain fonts will let you/allow you to use a numeric vaue with ranges from 100 to 1000 (in hundreds)
+*/
+
+p {
+    /* font-weight: bold; */
+    /* font-weight: light; */
+    font-weight: normal;
+}
+
+/* line-height
+    - controls the height of a give line (just like line spacing in MS word)
+    - give it a value (multiplies the current line height which is always determined by the font-family itself
+ */
+
+ p {
+     line-height: 1.5;
+ }
+
+ /* text align
+    - controls how the text of a given element is aligned (to the left, right, center)
+ */
+
+ h1 {
+     text-align: center;
+ }
+
+ /* text-decoration
+    - used to give text/fonts use to give underline, stikethrough, overline effects */
+
+p {
+    text-decoration: underline;
+}
+
+h1 {
+    text-decoration: line-through;
+}
+
+span {
+    text-decoration: overline;
+}
+
