@@ -1,0 +1,27 @@
+/* Hexadecimal */
+h1 {
+    color: #FF0000;
+    border: 5px solid #FF00FF;
+}
+
+/* RGB */
+h4 {
+    color: rgba(11, 98, 160, 0.938);
+    background: rgb(255, 100,0);
+}
+
+/* RGBA */
+li {
+    color: rgba(11, 98,160, .6);
+    background: white;
+}
+
+body {
+    /* background: pink; */
+    background: url(Nasa.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
