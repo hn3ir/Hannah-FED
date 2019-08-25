@@ -1,0 +1,44 @@
+
+* {
+    border: 1px solid lightgray;
+}
+
+/* Descendant Selector - takes 2 or more tag names (selectors) and chains them together */
+
+li a {
+    color: red;
+}
+
+/* Adjacent Selector - select elements that come after another element; not nested inside, but rather siblings */
+
+h4 + ul {
+    border: 2px solid red;
+}
+
+/* Attribute Selector - a way to select elements based off of any attribute; */
+
+a[href="http://www.google.com"] {
+    background: lightblue;
+}
+/* 
+    For Inputs
+    Input[type="text/password/checkbox/radio/etc"] {
+        background: blue;
+    }
+*/
+
+/* nth of type - it takes a number and selects every nth instance of a specific selector (element)*/
+ul:nth-of-type(3) {
+    background: lightseagreen;
+}
+
+li:nth-of-type(odd) {
+    background: pink;
+}
+
+li:nth-of-type(even)
+{
+    background: cyan;
+}
+
+
