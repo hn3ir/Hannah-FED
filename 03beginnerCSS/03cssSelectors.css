@@ -1,0 +1,15 @@
+body {
+    background: orange;
+}
+
+li{
+    border: 2px dashed cyan;
+}
+
+#important {
+    background: yellow;
+}
+
+.completed {
+    text-decoration: line-through wavy;
+}
