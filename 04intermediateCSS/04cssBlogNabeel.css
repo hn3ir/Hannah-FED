@@ -1,0 +1,27 @@
+ body {
+     border: 20px solid grey;
+     padding: 20px;
+     margin: 20px auto;
+     max-width: 700px;
+     width: 80%;
+ }
+
+ p {
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ }
+
+ h2 {
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     color: black;
+     font-size: 2rem;
+ }
+
+ .quote {
+     border-left: 5px solid gray;
+     padding-left: 5px;
+ }
+
+ .date {
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     color: blueviolet;
+ }

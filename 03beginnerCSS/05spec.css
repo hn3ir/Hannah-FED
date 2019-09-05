@@ -1,0 +1,20 @@
+body {
+    color: red;
+}
+
+ul {
+    color: purple;
+}
+
+li {
+    color: orange;
+}
+
+.highlight {
+    background:grey;
+    color: aquamarine;
+}
+
+#special {
+    color: aquamarine;
+}
