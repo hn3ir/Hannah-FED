@@ -1,9 +1,11 @@
 h1 {
     color: blue;
-    background-color: gray;
 }
 
 .button {
     background-color: blue;
 }
 
+p {
+    color: grey;
+}
