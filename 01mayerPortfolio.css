@@ -13,3 +13,7 @@ p {
 ul {
     list-style-type: lower-alpha;
 }
+
+.btn {
+    background-color: magenta;
+}
