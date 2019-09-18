@@ -17,3 +17,9 @@ ul {
 .btn {
     background-color: magenta;
 }
+
+ul {
+    text-align: center;
+    list-style: inside;
+    list-style-type:none;
+  }
