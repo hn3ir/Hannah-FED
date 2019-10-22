@@ -68,4 +68,5 @@ val = str.includes("Whatsup");
 val = str.includes("hello");
 
 // Output
+
 console.log(val);

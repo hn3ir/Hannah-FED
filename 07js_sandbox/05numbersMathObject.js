@@ -41,6 +41,7 @@ value = (Math.random() * 20 + 1).toFixed(2);
     // generates random number between 0 and 20, in 2 decimal places.
 
 
+
 // Output
 console.log(value);
 
