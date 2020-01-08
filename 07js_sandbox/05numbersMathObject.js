@@ -3,7 +3,7 @@ const num2 = 50;
 
 let value;
 
-// Simple math with numbers
+// Simple math with numbers using arithmetic operators
 value = num1 + num2;
 value = num1 * num2;
 value = num1 - num2;
