@@ -60,5 +60,5 @@ val = (y > 9) || (x=== 5);
 val = !(x ===y);
 
 
-//output
+//output //
 console.log(val);
