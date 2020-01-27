@@ -415,4 +415,414 @@ if (
 } else {
     console.log("N/A");
     }
+
+
+
+/*
+From the smallest of creatures to the largest of animals, inevitably every living, breathing thing must ingest other organisms to survive. This means that all animals will fall within one of the three consumer-based categories based on the types of food that they eat.
+
+   - Animals that eat only plants are called herbivores
+   - Animals that eat only other animals are called carnivores
+   - Animals that eat both plants and animals are called omnivores
+
+Directions:
+Write a series of ternary statements that sets the variable category equal to:
+   - "herbivore" if an animal eats plants
+   - "carnivore" if an animal eats animals
+   - "omnivore" if an animal eats plants and animals
+   - undefined if an animal doesn't eat plants or animals
+
+Use the eatsPlants and eatsAnimals variables to test your code.
+
+TIP: Make sure to test your code with different values. For example,
+
+If eatsPlants equals true and eatsAnimals equals false, then herbivore should be printed to the console.
+*/
+
+/*
+ * Programming Quiz - Navigating the Food Chain
+ *
+ * Use a series of ternary operator to set the category to one of the following:
+ *   - "herbivore" if an animal eats plants
+ *   - "carnivore" if an animal eats animals
+ *   - "omnivore" if an animal eats plants and animals
+ *   - undefined if an animal doesn't eat plants or animals
+ *
+ * Notes
+ *   - use the variables `eatsPlants` and `eatsAnimals` in your ternary expressions
+ *   - `if` statements aren't allowed ;-)
+ */
+
+// change the values of `eatsPlants` and `eatsAnimals` to test your code
+var eatsPlants = false;
+var eatsAnimals = false;
+
+var category = (eatsPlants && eatsAnimals) ? 'omnivore'  
+    : eatsPlants ? 'herbivore' 
+    : eatsAnimals ? 'carnivore'
+    : undefined;
+console.log(category);
+
+
+
+
+/*
+In 2015, the U.S. Bureau of Labor Statistics conducted research to reveal how average salary is directly related to the number of years spent in school. In their findings, they found that people with:
+   - no high school diploma earned an average of $25,636/year,
+   - a high school diploma earned an average of $35,256/year,
+   - an Associate's degree earned an average of $41,496/year,
+   - a Bachelor's degree earned an average of $59,124/year,
+   - a Master's degree earned an average of $69,732/year,
+   - a Professional degree earned an average of $89,960/year,
+   - and a Doctoral degree earned an average of $84,396/year.
+
+Directions:
+Write a switch statement to set the average salary of a person based on their type of completed education.
+
+Afterwards, print the following to the console.
+   In 2015, a person with __________ earned an average of __________/year.
+
+Fill in the blanks with the type of education and the expected average salary. 
+Make sure to use correct grammar in your printed statement. For help, refer to the findings above.
+   In 2015, a person with a Bachelor's degree earned an average of $59,124/year.
+
+TIP: To print out the average salary with commas (i.e. 59,124), use the toLocaleString() method and pass it the locale "en-US". For example, salary.toLocaleString("en-US").
+
+TIP: Make sure to test your code with different values. For example,
+
+If education equals "an Associate's degree", then In 2015, a person with an Associate's degree earned an average of $41,496/year. should be printed to the console.
+*/
+
+/*
+ * Programming Quiz: Back to School
+ *
+ * Write a switch statement to set the average salary of a person based on their type of completed education.
+ *
+ */
+
+// change the value of `education` to test your code
+var education = 'Associates degree';
+
+// set the value of this based on a person's education
+var salary;
+
+switch(education) {
+  case 'no high school diploma'
+  :  salary = 25636;
+    break;
+  case 'high school diploma'
+  :  salary = 35256;
+    break;
+  case 'Associates degree'
+  :  salary = 41496;
+    break;
+  case 'Bachelors degree' :  
+    salary = 59124;
+    break;
+  case 'Masters degree'
+  :  salary = 69732;
+    break;
+  case 'Professional degree'
+  :  salary = 89960;
+    break;  
+  case 'Doctoral degree'
+  :  salary = 84396;
+    break ;
+
+}
+
+console.log("In 2015, a person with " + education + " earned an average of " + salary.toLocaleString("en-US") + "/year" );
+
+
+
+/* Loop through the numbers 1 to 100
+   If the number is divisible by 3, print "Fizz"
+   If the number is divisible by 5, print "Buzz"
+   If the number is divisible by both 3 and 5, print "FizzBuzz"
+   If the number is not divisible by 3 or 5, print the number
+
+TIP: A number x is divisible by a number y if the answer to x / y has a remainder of 0. For example, 10 is divisible by 2 because 10 / 2 = 5 with no remainder. You can check if a number is divisible by another number by checking if x % y === 0.
+
+Directions:
+Write a while loop that:
+
+Loop through the numbers 1 to 50
+   If the number is divisible by 3, print "Julia"
+   If the number is divisible by 5, print "James"
+   If the number is divisible by 3 and 5, print "JuliaJames"
+   If the number is not divisible by 3 or 5, print the number
+*/
+//Programming Quiz: JuliaJames
+
+var x = 1;
+
+while (x<=50) {
+  if ((x % 3 === 0) && (x % 5 === 0)) {
+    console.log("JuliaJames");
+  }
+  else if (x % 3 === 0) {
+    console.log("Julia");
+  }
+  else if (x % 5 === 0) {
+    console.log("James")
+  }
+  else {
+    console.log(x); 
+  }
+  x++;
+}
+
+
+/*
+Directions:
+Write a loop that prints out the following song. Starting at 99, and ending at 1 bottle.
+
+   99 bottles of juice on the wall! 99 bottles of juice! Take one down, pass it around... 98 bottles of juice on the wall!
+   98 bottles of juice on the wall! 98 bottles of juice! Take one down, pass it around... 97 bottles of juice on the wall!
+   ...
+   2 bottles of juice on the wall! 2 bottles of juice! Take one down, pass it around... 1 bottle of juice on the wall!
+   1 bottle of juice on the wall! 1 bottle of juice! Take one down, pass it around... 0 bottles of juice on the wall!
+Some Notes:
+1) Note the pluralization of the word "bottle" when you go from 2 bottles to 1 bottle.
+2) Your text editor may try to autocorrect your ellipses (...) to the ellipses character (…). Do not use the ellipses character for this quiz; use three consecutive periods instead.
+*/
+
+/*
+ * Programming Quiz: 99 Bottles of Juice
+ *
+ * Use the following `while` loop to write out the song "99 bottles of juice".
+ * Log the lyrics to the console.
+ *
+ * Note
+ *   - Each line of the lyrics needs to be logged to the same line.
+ *   - The pluralization of the word "bottle" changes from "2 bottles" to "1 bottle" to "0 bottles".
+
+ */
+var num = 99;
+
+while ( num >= 1) {
+  if (num > 2) {
+    console.log(num + " bottles of juice on the wall! " + num + " bottles of juice! Take one down, pass it around... " + (num-1) + " bottles of juice on the wall!");
+  } 
+  else if (num === 2) {
+    console.log(num + " bottles of juice on the wall! " + num + " bottles of juice! Take one down, pass it around... " + (num-1) + " bottle of juice on the wall!");
+  } 
+  else {
+    console.log(num + " bottle of juice on the wall! " + num + " bottle of juice! Take one down, pass it around... " + (num-1) + " bottles of juice on the wall!");
+  }
+    // print lyrics using num
+    // don't forget to check pluralization on the last line!
+  num = num - 1;
+}
+
+
+/*
+NASA's countdown to launch includes checkpoints where NASA engineers complete certain technical tasks. During the final minute, NASA has 6 tasks to complete:
+
+   - Orbiter transfers from ground to internal power (T-50 seconds)
+   - Ground launch sequencer is go for auto sequence start (T-31 seconds)
+   - Activate launch pad sound suppression system (T-16 seconds)
+   - Activate main engine hydrogen burnoff system (T-10 seconds)
+   - Main engine start (T-6 seconds)
+   - Solid rocket booster ignition and liftoff! (T-0 seconds)
+
+NOTE: "T-50 seconds" read as "T-minus 50 seconds".
+
+Directions:
+Write a while loop that counts down from 60 seconds and:
+   - If there's a task being completed, it prints out the task
+   - If there is no task being completed, it prints out the time as T-x seconds
+Use the task and time descriptions described above.
+
+Your Code:
+Your output should look like the following:
+   T-60 seconds
+   T-59 seconds
+   T-58 seconds
+   ...
+   T-51 seconds
+   Orbiter transfers from ground to internal power
+   T-49 seconds
+   ...
+   T-3 seconds
+   T-2 seconds
+   T-1 seconds
+   Solid rocket booster ignition and liftoff!
+*/
+/*
+ * Programming Quiz: Countdown, Liftoff!
+ * 
+ * Using a while loop, print out the countdown output above.
+ */
+
+var time = 60 
+
+while(time >= 0) {
+  if(time === 50) {
+    console.log("Orbiter transfers from ground to internal power (T-50 seconds)");
+  } else if (time === 31) {
+    console.log("Ground launch sequencer is go for auto sequence start (T-31 seconds)");
+  } else if (time === 16) {
+    console.log("Activate launch pad sound suppression system (T-16 seconds)");
+  } else if (time === 10) {
+      console.log("Activate main engine hydrogen burnoff system (T-10 seconds)");
+  } else if (time === 6) {
+      console.log("Main engine start (T-6 seconds)");
+  } else if (time === 0) {
+      console.log("Solid rocket booster ignition and liftoff! (T-0 seconds)");
+  } else {
+    console.log("t-" + time + "seconds");
+  }
+  time = time - 1;
+}
+
+
+/*
+Theater seats often display a row and seat number to help theatergoers find their seats. If there are 26 rows (0 to 25) and 100 seats (0 to 99) in each row, write a nested for loop to print out all of the different seat combinations in the theater.
+
+Example output for row-seat information: output each row and seat number on a separate line
+   0-0
+   0-1
+   0-2
+   ...
+   25-97
+   25-98
+   25-99
+*/
+/*
+ * Programming Quiz: Find my Seat
+ * 
+ * Write a nested for loop to print out all of the different seat combinations in the theater.
+ * The first row-seat combination should be 0-0 
+ * The last row-seat combination will be 25-99
+ * 
+ * Things to note: 
+ *  - the row and seat numbers start at 0, not 1
+ *  - the highest seat number is 99, not 100
+ */
+
+for(var row = 0; row <=25; row++) {
+  for (var seat = 0; seat <= 99; seat++) {
+    console.log(row + "-" + seat);
+  }
+}
+
+
+
+/*
+Directions:
+Write a function called laugh() that takes one parameter, num that represents the number of "ha"s to return.
+
+TIP: You might need a loop to solve this!
+
+Here's an example of the output and how to call the function that you will write:
+
+console.log(laugh(2));
+Prints: "haha!"
+*/
+
+function laugh(num) {
+  var ha = "";
+  for (var i = 0; i < num; i++) {
+    ha = ha + "ha";
+  }
+  return(ha + "!");
+}
+console.log(laugh(3));
+
+
+
+/*
+Directions:
+For this quiz, you're going to create a function called buildTriangle() that will accept an input (the triangle at its widest width) and will return the string representation of a triangle.
+
+You will need to call this makeLine() function in buildTriangle().
+
+This will be the most complicated program you've written yet, so take some time thinking through the problem before diving into the code. What tools will you need from your JavaScript tool belt? Professionals plan out their code before writing anything. Think through the steps your code will need to take and write them down in order. Then go through your list and convert each step into actual code. Good luck!
+*/
+
+function makeLine(length) {
+  var line = "";
+  for (var j = 1; j <= length; j++) {
+      line += "* ";
+  }
+  return line + '\n';
+}
+
+// your code goes here.  Make sure you call makeLine() in your own code.
+
+function buildTriangle(width) {
+var triangle = "";
+for (var i = 1; i <= width; i++) {
+  triangle += makeLine(i)
+}
+return triangle + '\n';
+}
+
+
+
+
+
+// test your code by uncommenting the following line
+console.log(buildTriangle(10));
+
+
+/*
+Directions:
+Write an anonymous function expression that stores a function in a variable called "laugh" and outputs the number of "ha"s that you pass in as an argument.
+
+laugh(3);
+   Returns: hahaha!
+*/
+
+var laugh = function(x){
+  var ha = "";
+  for(let i = 0; i < x; i++) {
+    ha += "ha";
+  }
+
+  return ha + "!";
+}
   
+  /* finish the function expression */
+
+console.log(laugh(10)); 
+
+
+
+// Directions:
+// Write a named function expression that stores the function in a variable called cry and returns "boohoo!". Don't forget to call the function using the variable name, not the function name:
+
+// cry();
+//    Returns: boohoo!
+
+var cry = function crying() {
+  return 'boohoo!';
+}
+console.log(cry());
+
+
+
+/*
+Directions:
+Call the emotions() function so that it prints the output you see below, but instead of passing the laugh() function as an argument, pass an inline function expression instead.
+
+emotions("dead inside", laugh(2)); // you can use your laugh function from the previous quizzes
+Prints: "I am dead inside, haha!"
+*/
+
+// don't change this code
+function emotions(myString, myFunc) {
+  console.log("I am " + myString + ", " + myFunc(2));
+}
+
+// your code goes below here
+// call the emotions function here and pass in an inline function expression
+
+emotions("sad", function upset(x){
+var cry = "";
+ for(var i = 0; i < x; i++){
+  cry += "ha";
+ }
+return cry + "!";
+});
