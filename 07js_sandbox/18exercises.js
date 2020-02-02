@@ -826,3 +826,462 @@ var cry = "";
  }
 return cry + "!";
 });
+/*
+Directions:
+Starting with this array of prices, change the prices of the 1st, 3rd, and 7th elements in the array.
+
+var prices = [1.23, 48.11, 90.11, 8.50, 9.99, 1.00, 1.10, 67.00];
+TIP: The 1st element of any array has an index of 0.
+
+Afterwards, print out the prices array to the console.
+*/
+
+var prices = [1.23, 48.11, 90.11, 8.50, 9.99, 1.00, 1.10, 67.00];
+
+prices[0] = 8.99;
+prices[2] = 15.3;
+prices[6] = 4.7;
+
+console.log(prices);
+
+
+
+/*
+Directions:
+James was creating an array with the colors of the rainbow, and he forgot some colors. The standard rainbow colors are usually listed in this order:
+
+   var rainbow = ["Red", "Orange", "Yellow", "Green", "Blue", "Purple"];
+
+but James had this:
+
+   var rainbow = ["Red", "Orange", "Blackberry", "Blue"];
+
+Using only the splice() method, insert the missing colors into the array, and remove the color "Blackberry" by following these steps:
+   - Remove "Blackberry"
+   - Add "Yellow" and "Green"
+   - Add "Purple"
+*/
+
+var rainbow = ['Red', 'Orange', 'Blackberry', 'Blue'];
+
+// your code goes here
+
+/*
+In the Harry Potter novels, children attending the Hogwarts School of Witchcraft and Wizardry belong to one of four houses: Gryffindor, Hufflepuff, Ravenclaw, or Slytherin. Each year, the houses assemble a Quidditch team of seven players to compete for the coveted Quidditch Cup.
+
+Consider the following array:
+   var team = ["Oliver Wood", "Angelina Johnson", "Katie Bell", "Alicia Spinnet", "George Weasley", "Fred Weasley", "Harry Potter"];
+
+Directions:
+Create a function called hasEnoughPlayers() that takes the team array as an argument and returns true or false depending on if the array has at least seven players.
+*/
+
+
+// your code goes here
+function hasEnoughPlayers(team)
+{
+  if (team.length >= 7)
+  {
+      console.log(team.length)
+    return true;
+  } else {
+      console.log(team.length)
+    return false;
+    
+  }
+}
+
+
+
+var team = ["Oliver Wood",  "Katie Bell", "Alicia Spinnet", "George Weasley", "Fred Weasley", "Harry Potter"];
+console.log(hasEnoughPlayers(team));
+
+
+/*
+Directions:
+Use the array's forEach() method to loop over the following array and add 100 to each of the values if the value is divisible by 3.
+
+var test = [12, 929, 11, 3, 199, 1000, 7, 1, 24, 37, 4, 19, 300, 3775, 299, 36, 209, 148, 169, 299, 6, 109, 20, 58, 139, 59, 3, 1, 139];
+
+*/
+/* *
+ * Use the existing `test` variable and write a `forEach` loop
+ * that adds 100 to each number that is divisible by 3.
+ *
+ * Things to note:
+ *  - you must use an `if` statement to verify code is divisible by 3
+ *  - you can use `console.log` to verify the `test` variable when you're finished looping
+ */
+
+var test = [12, 929, 11, 3, 199, 1000, 7, 1, 24, 37, 4,
+  19, 300, 3775, 299, 36, 209, 148, 169, 299,
+  6, 109, 20, 58, 139, 59, 3, 1, 139
+];
+
+// Write your code here
+test.forEach(function(value, index, array) {
+ if(value % 3 === 0) {
+   array[index] = value += 100;
+ }
+});
+console.log(test);
+
+/*
+Directions:
+Use the map() method to take the array of bill amounts shown below, and create a second array of numbers called totals that shows the bill amounts with a 15% tip added.
+   var bills = [50.23, 19.12, 34.01, 100.11, 12.15, 9.90, 29.11, 12.99, 10.00, 99.22, 102.20, 100.10, 6.77, 2.22];
+
+Print out the new totals array using console.log.
+   TIP: Check out the toFixed() method for numbers to help with rounding the values to a maximum of 2 decimal places. Note, that the method returns a string to maintain the "fixed" format of the number. So, if you want to convert the string back to a number, you can cast it or convert it back to a number:
+      Number("1");
+   Returns: 1
+*/
+/*
+ *
+ * Use the .map() method to take the bills array below and create a second array
+ * of numbers called totals. The totals array should contains each amount from the
+ * bills array but with a 15% tip added. Log the totals array to the console.
+ *
+ * For example, the first two entries in the totals array would be:
+ *
+ * [57.76, 21.99, ... ]
+ *
+ * Things to note:
+ *  - each entry in the totals array must be a number
+ *  - each number must have an accuracy of two decimal points
+ */
+
+var bills = [50.23, 19.12, 34.01,
+  100.11, 12.15, 9.90, 29.11, 12.99,
+  10.00, 99.22, 102.20, 100.10, 6.77, 2.22
+];
+
+/*
+Directions:
+Use the map() method to take the array of bill amounts shown below, and create a second array of numbers called totals that shows the bill amounts with a 15% tip added.
+   var bills = [50.23, 19.12, 34.01, 100.11, 12.15, 9.90, 29.11, 12.99, 10.00, 99.22, 102.20, 100.10, 6.77, 2.22];
+
+Print out the new totals array using console.log.
+   TIP: Check out the toFixed() method for numbers to help with rounding the values to a maximum of 2 decimal places. Note, that the method returns a string to maintain the "fixed" format of the number. So, if you want to convert the string back to a number, you can cast it or convert it back to a number:
+      Number("1");
+   Returns: 1
+*/
+/*
+ *
+ * Use the .map() method to take the bills array below and create a second array
+ * of numbers called totals. The totals array should contains each amount from the
+ * bills array but with a 15% tip added. Log the totals array to the console.
+ *
+ * For example, the first two entries in the totals array would be:
+ *
+ * [57.76, 21.99, ... ]
+ *
+ * Things to note:
+ *  - each entry in the totals array must be a number
+ *  - each number must have an accuracy of two decimal points
+ * 
+ *  1. look at your notes first. 
+ *  2. google 'javascript map function add percentage to elements array'
+ */
+
+var bills = [50.23, 19.12, 34.01,
+  100.11, 12.15, 9.90, 29.11, 12.99,
+  10.00, 99.22, 102.20, 100.10, 6.77, 2.22
+];
+
+var totals = bills.map(function(bill) {
+ bill += bill * 0.15
+ return Number(bill.toFixed(2));
+
+ 
+
+});
+
+console.log(totals);
+
+
+/*
+Directions:
+Use a nested for loop to take the numbers array below and replace all of the values that are divisible by 2 (even numbers) with the string "even" and all other numbers with the string "odd".
+
+var numbers = [
+    [243, 12, 23, 12, 45, 45, 78, 66, 223, 3],
+    [34, 2, 1, 553, 23, 4, 66, 23, 4, 55],
+    [67, 56, 45, 553, 44, 55, 5, 428, 452, 3],
+    [12, 31, 55, 445, 79, 44, 674, 224, 4, 21],
+    [4, 2, 3, 52, 13, 51, 44, 1, 67, 5],
+    [5, 65, 4, 5, 5, 6, 5, 43, 23, 4424],
+    [74, 532, 6, 7, 35, 17, 89, 43, 43, 66],
+    [53, 6, 89, 10, 23, 52, 111, 44, 109, 80],
+    [67, 6, 53, 537, 2, 168, 16, 2, 1, 8],
+    [76, 7, 9, 6, 3, 73, 77, 100, 56, 100]
+];
+*/
+/*
+ *   - The `numbers` variable is an array of arrays.
+ *   - Use a nested `for` loop to cycle through `numbers`.
+ *   - Convert each even number to the string "even"
+ *   - Convert each odd number to the string "odd"
+ */
+
+var numbers = [
+  [243, 12, 23, 12, 45, 45, 78, 66, 223, 3],
+  [34, 2, 1, 553, 23, 4, 66, 23, 4, 55],
+  [67, 56, 45, 553, 44, 55, 5, 428, 452, 3],
+  [12, 31, 55, 445, 79, 44, 674, 224, 4, 21],
+  [4, 2, 3, 52, 13, 51, 44, 1, 67, 5],
+  [5, 65, 4, 5, 5, 6, 5, 43, 23, 4424],
+  [74, 532, 6, 7, 35, 17, 89, 43, 43, 66],
+  [53, 6, 89, 10, 23, 52, 111, 44, 109, 80],
+  [67, 6, 53, 537, 2, 168, 16, 2, 1, 8],
+  [76, 7, 9, 6, 3, 73, 77, 100, 56, 100]
+];
+
+// your code goes here
+/*
+Directions:
+Use a nested for loop to take the numbers array below and replace all of the values that are divisible by 2 (even numbers) with the string "even" and all other numbers with the string "odd".
+
+var numbers = [
+    [243, 12, 23, 12, 45, 45, 78, 66, 223, 3],
+    [34, 2, 1, 553, 23, 4, 66, 23, 4, 55],
+    [67, 56, 45, 553, 44, 55, 5, 428, 452, 3],
+    [12, 31, 55, 445, 79, 44, 674, 224, 4, 21],
+    [4, 2, 3, 52, 13, 51, 44, 1, 67, 5],
+    [5, 65, 4, 5, 5, 6, 5, 43, 23, 4424],
+    [74, 532, 6, 7, 35, 17, 89, 43, 43, 66],
+    [53, 6, 89, 10, 23, 52, 111, 44, 109, 80],
+    [67, 6, 53, 537, 2, 168, 16, 2, 1, 8],
+    [76, 7, 9, 6, 3, 73, 77, 100, 56, 100]
+];
+*/
+/*
+ *   - The `numbers` variable is an array of arrays.
+ *   - Use a nested `for` loop to cycle through `numbers`.
+ *   - Convert each even number to the string "even"
+ *   - Convert each odd number to the string "odd"
+ */
+
+var numbers = [
+  [243, 12, 23, 12, 45, 45, 78, 66, 223, 3],
+  [34, 2, 1, 553, 23, 4, 66, 23, 4, 55],
+  [67, 56, 45, 553, 44, 55, 5, 428, 452, 3],
+  [12, 31, 55, 445, 79, 44, 674, 224, 4, 21],
+  [4, 2, 3, 52, 13, 51, 44, 1, 67, 5],
+  [5, 65, 4, 5, 5, 6, 5, 43, 23, 4424],
+  [74, 532, 6, 7, 35, 17, 89, 43, 43, 66],
+  [53, 6, 89, 10, 23, 52, 111, 44, 109, 80],
+  [67, 6, 53, 537, 2, 168, 16, 2, 1, 8],
+  [76, 7, 9, 6, 3, 73, 77, 100, 56, 100]
+];
+
+// your code goes here
+
+for (var row = 0; row < numbers.length; row++) {
+ for (var column = 0; column < numbers[row].length; column++){
+   if(numbers[row][column] % 2 === 0) {
+   numbers[row][column] = "even";
+   } else {
+     numbers[row][column] = "odd";
+   }
+ }
+}
+
+console.log(numbers);
+
+
+var superUmbrella = {
+  color: "blue",
+  isOpen: false,
+  open: function() {
+      
+      if (superUmbrella.isOpen === true) {
+          // umbrella is open 
+          return "The umbrella is already opened!";
+      } else {
+          superUmbrella.isOpen = true;
+          // umbrella is open
+          return "Hannah opens the umbrella!";
+      }
+  },
+  close: function(){
+      if (superUmbrella.isOpen === false) {
+          return "The umbrella is already closed";
+      } else {
+          superUmbrella.isOpen = false;
+          return "Hanna closes the umbrella";
+      }
+  }
+};
+
+superUmbrella.close();
+
+/*
+Directions:
+Create a meal object to represent the following menu item:
+   The Egg-Master - $19.95
+   eggs, bacon, avacado toast, hashbrowns, and guilt-free pancakes
+The object should contain properties for the name, price, and ingredients.
+*/
+
+// your code goes here
+
+var breakfast = {
+  name: "The Egg-Master",
+  price: 19.95,
+  ingredients: ['eggs','bacon', 'avacado toast', 'hashbrowns', 'guilt-free pancakes']
+};
+console.log(breakfast);
+
+
+var checkingAccount = {
+  balance: 1000,
+  interestRatePercentage: 1,
+  deposit: function addMoney(amount) {
+      if (amount > 0) {
+          savingsAccount.balance += amount;
+      }
+  },
+  withdraw: function removeMoney(amount) {
+      var verifyBalance = savingsAccount.balance - amount;
+      if (amount > 0 && verifyBalance >= 0) {
+          savingsAccount.balance -= amount;
+      }
+  },
+  /* add a printAccountStatus() method that returns the following account message:
+  Hello!
+  Your current balance is $1000 and your interest rate is 1%. */
+};
+
+var checkingAccount = {
+  balance: 77000,
+  interestRatePercentage: 4.5,
+  deposit: function addMoney(amount) {
+      if (amount > 0) {
+          checkingAccount.balance += amount;
+      }
+  },
+  withdraw: function removeMoney(amount) {
+      var verifyBalance = checkingAccount.balance - amount;
+      if (amount > 0 && verifyBalance >= 0) {
+          checkingAccount.balance -= amount;
+      }
+  },
+  /* add a printAccountStatus() method that returns the following account message:
+  Hello!
+  Your current balance is $1000 and your interest rate is 1%. */
+  printAccountStatus: function() {
+    return "Hello! \nYour current balance is " + checkingAccount.balance + " and your interest rate is " +  checkingAccount.interestRatePercentage + "%"; 
+  }
+};
+
+console.log(checkingAccount.printAccountStatus());
+
+
+var checkingAccount = {
+   balance: 77000,
+   interestRatePercentage: 4.5,
+   deposit: function addMoney(amount) {
+       if (amount > 0) {
+           checkingAccount.balance += amount;
+       }
+   },
+   withdraw: function removeMoney(amount) {
+       var verifyBalance = checkingAccount.balance - amount;
+       if (amount > 0 && verifyBalance >= 0) {
+           checkingAccount.balance -= amount;
+       }
+   },
+   /* add a printAccountStatus() method that returns the following account message:
+   Hello!
+   Your current balance is $1000 and your interest rate is 1%. */
+   printAccountStatus: function() {
+     return "Hello! \nYour current balance is " + checkingAccount.balance + " and your interest rate is " +  checkingAccount.interestRatePercentage + "%"; 
+   }
+};
+
+console.log(checkingAccount.printAccountStatus());
+
+
+/*
+create an object called myspaceProfile. the object must have 3 properties
+    1. user's name
+    2. number of friends they have
+    3. array of messages they've shared about themselves
+
+the object should have the following methods:
+    1. shareMessage - add a new message to the array
+    2. deleteMessage - remove the message corresponding to the index provided
+    3. addFriend - increase current number of friends by one
+    4. removeFriend - decrease current number of friends by one
+ */
+
+var myspaceProfile = {
+  userName: "Hanna",
+  numberOfFriends: 3,
+  messages: ["hey", "how u doin suga", "sup"],
+  shareMessage: function(message){
+      myspaceProfile.messages.push(message);
+  },
+  deleteMessage: function(index){
+      // google: delete array element by index number
+      myspaceProfile.messages.splice(index, 1);
+  },
+  addFriend: function(){
+    myspaceProfile.numberOfFriends++;
+  },
+  removeFriend: function(){
+    myspaceProfile.numberOfFriends--;
+  }
+}
+
+myspaceProfile.removeFriend();
+console.log(myspaceProfile);
+
+
+
+var donuts = [
+  { type: "Jelly", cost: 1.05 },
+  { type: "Chocolate", cost: 1.45 },
+  { type: "Cider", cost: 1.79 },
+  { type: "Boston Cream", cost: 0.99 }
+];
+
+
+
+
+/***************************************************************************/
+
+//Given this nested object
+var library = [
+  {
+      title: "Our Revolution",
+      author: "Bernie Sanders",
+      finishedReading: false
+  },
+  {
+      title: "The Catcher In The Rye",
+      author: "J.D. Salinger",
+      finishedReading: true
+  },
+  {
+      title: "Animal Farm",
+      author: "George Orwell",
+      finishedReading: true
+  },
+  {
+      title: "Anthem",
+      author: "Ayn Rand",
+      finishedReading: true
+  },
+  {
+      title: "The Hobbit",
+      author: "J.R.R. Tolkien",
+      finishedReading: false
+  }
+];
+/* Display the reading status of all books in the library object.  For example:
+  For books you have finished reading, display  
+      You have finished reading "Animal Farm" by George Orwell.
+  And
+      You have not finished reading "Our Revolution" by Bernie Sanders.*/
