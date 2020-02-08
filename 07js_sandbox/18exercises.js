@@ -1285,3 +1285,16 @@ var library = [
       You have finished reading "Animal Farm" by George Orwell.
   And
       You have not finished reading "Our Revolution" by Bernie Sanders.*/
+
+
+
+for (var i = 0; i < library.length; i++) 
+   {
+    var book = "'" + library[i].title + "'" + ' by ' + library[i].author + ".";
+    if (library[i].readingStatus) {
+      console.log("You have finished reading " + book + "by" author);
+    } else
+    {
+     console.log("You have not finished reading " + book + "by" author);
+    }
+   }
