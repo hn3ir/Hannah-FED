@@ -5,5 +5,5 @@ What is the DOM?
 - Tree of Nodes/Elements created by the browser
 - JavaScript can be used to read, write and manipulate these DOM Elements
 - Object-Oriented representation
-    - each node has its own set of properties and methods that we can change, add, or remove.
+    - each node has its own set of properties and methods that we can change, add, or remove. (nodes are like elements)
 - 
