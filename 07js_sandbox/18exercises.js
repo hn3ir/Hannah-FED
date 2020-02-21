@@ -1301,6 +1301,20 @@ for (var i = 0; i < library.length; i++)
  }
 }
 
+=======
+for (var i = 0; i < library.length; i++) 
+   {
+    var book = "'" + library[i].title + "'" + ' by ' + library[i].author + ".";
+    if (library[i].readingStatus) {
+      console.log("You have finished reading " + book + "by" author);
+    } else
+    {
+     console.log("You have not finished reading " + book + "by" author);
+    }
+   }
+>>>>>>> 3a61241e8fe0b5b79b9d921338fff94a6f9f2a41
+
+
 
 
 /* Write a function that reverses any sequence of numbers and console the results. For Example: 
@@ -1326,15 +1340,16 @@ console.log(reversedNum(23000000))
 console.log(reversedNum(543.21))
 
 
-=======
-for (var i = 0; i < library.length; i++) 
-   {
-    var book = "'" + library[i].title + "'" + ' by ' + library[i].author + ".";
-    if (library[i].readingStatus) {
-      console.log("You have finished reading " + book + "by" author);
-    } else
-    {
-     console.log("You have not finished reading " + book + "by" author);
-    }
-   }
->>>>>>> 3a61241e8fe0b5b79b9d921338fff94a6f9f2a41
+==========================================================
+
+
+// your code goes here
+//1. Create a variable called cry  
+//2. Set vary cry to equal a named function 
+//3. retun boohoo string 
+//3. Call variable cry
+var cry = function sad(){
+    return "boohoo!";
+}; 
+
+console.log (cry());
