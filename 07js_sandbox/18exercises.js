@@ -1307,7 +1307,23 @@ for (var i = 0; i < library.length; i++)
     Your function should reverse 1836654 to 4566381 */
 
 //your code goes here
+function reverseNum(num) {
+	return (
+    parseFloat(
+      num
+        .toString()
+        .split('')
+        .reverse()
+        .join('')
+    ) * Math.sign(num)
+  )
+}
 
+console.log(reversedNum(-543.21))
+
+console.log(reversedNum(23000000))
+
+console.log(reversedNum(543.21))
 
 
 =======
