@@ -1,0 +1,8 @@
+DOM Crash Course Part 1 notes
+- Object Oriented Representation = each node has its own properties and methods that we can change/add/remove etc
+
+- Elements (head, body tags) = children of the root element.
+  - those elements have children (body, a tags,)
+    -those elements have text nodes ("my header")
+  -attributes are connected to elements (ie href onto 'a' tag)
+
