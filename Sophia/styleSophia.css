@@ -68,6 +68,12 @@ body {
 	padding-bottom: 2rem;
 }
 
+.caption h5 {
+	color: white;
+	font-size: 1.4rem;
+	text-transform: uppercase;
+	padding-bottom: 2rem;
+}
 
 .btn {
 	border-width: medium;
