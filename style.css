@@ -333,77 +333,92 @@ section{
 }
 
 /**** SERVICE END ****/
-/**** PORTFOLIO ****/
 
-.portfolio-section{
-    padding: 0;
+
+/**** ORDERING GUIDE ****/
+.ordering-section h3{
+    font-size: 36px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    color: #222;
+    letter-spacing: 0.05em;
+  
 }
 
-.portfolio-section .portfolio-section-inner{
-    display: table;
-    table-layout: fixed;
-    width: 100%;
-    max-width: 2000px;
+.ordering-section h3:after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 3px;
+    margin: 30px auto 0;
+    background:#F05F40; 
 }
 
-.portfolio-section-inner .portfolio-section-row{
-    display: table-row;
-    width: 100%;
+
+.custom-counter {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-align: left;
 }
 
-.portfolio-section-inner .portfolio-section-data{
-    display: table-cell;
-    width: 33.33%;
-    vertical-align: middle;
-    height: 420px;
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: relative;
-    overflow: hidden;
+.custom-counter li {
+  counter-increment: step-counter;
+  margin-bottom: 30px;
 }
 
-.portfolio-section-inner .portfolio-section-data .portfolio-section-text{
-    position: absolute;
-    top: 150%;;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    background: rgba(0,0,0,0.8);
-    margin: auto;
-     -ms-transition: all 0.3s ease-in-out;
-    -webkit-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
+li:before {
+   
+    font-weight: bold;
 }
 
-.portfolio-section-inner .portfolio-section-data:hover .portfolio-section-text{
-    top: 0;
+.custom-counter li::before {
+  content: "Step " counter(step-counter);
+  margin-right: 5px;
+  font-size: 80%;
+  background-color: rgb(0,200,200);
+  color: white;
+  font-weight: bold;
+  padding: 3px 8px;
+  border-radius: 3px;
+  display: table;
 }
 
-.portfolio-section-text .portfolio-section-text-inner{
-    position: absolute;
-    top: 50%;
-    right: 20px;
-    left: 20px;
-    -webkit-transform: translateY(-50%);
-    transform: translateY(-50%);
+
+
+
+/**** ORDERING GUIDE END****/
+
+
+
+/**** RATES ****/
+.rates-section h3{
+    font-size: 36px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    color: #222;
+    letter-spacing: 0.05em;
+  
 }
 
-.portfolio-section-text p{
-    font-size: 28px;
+.rates-section h3:after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 3px;
+    margin: 30px auto 0;
+    background:#F05F40; 
+}
+
+.contact h4 {
+    font-size: 50px;
     line-height: 1.6;
-    color: #fff;
+    color: white;
+    margin-bottom: 15px;
 }
 
-.portfolio-section-text a{
-    color: #F05F40;
-    font-size: 14px;
-}
 
-.portfolio-section-text a:hover{
-    color: #fff;
-}
-/**** PORTFOLIO ****/
+/**** Rates ****/
 /**** FOOTER ****/
 
 footer{
@@ -413,7 +428,7 @@ footer{
     text-align: center;
 }
 
-footer h3{
+footer h4{
     font-size: 36px;
     margin-bottom: 30px;
     text-transform: capitalize;
@@ -429,6 +444,7 @@ footer h3:after {
     margin: 20px auto 0;
     background:#F05F40;
 }
+
 
 footer p{
     font-size: 18px;
@@ -460,4 +476,68 @@ footer a:hover{
 
 
 
+/* Steps */
+.step {
+  position: relative;
+  min-height: 1em;
+  color: gray;
+}
+.step + .step {
+  margin-top: 1.5em
+}
+.step > div:first-child {
+  position: static;
+  height: 0;
+}
+.step > div:not(:first-child) {
+  margin-left: 1.5em;
+  padding-left: 1em;
+}
+.step.step-active {
+  color: #4285f4
+}
+.step.step-active .circle {
+  background-color: #4285f4;
+}
 
+/* Circle */
+.circle {
+  background: gray;
+  position: relative;
+  width: 1.5em;
+  height: 1.5em;
+  line-height: 1.5em;
+  border-radius: 100%;
+  color: #fff;
+  text-align: center;
+  box-shadow: 0 0 0 3px #fff;
+}
+
+/* Vertical Line */
+.circle:after {
+  content: ' ';
+  position: absolute;
+  display: block;
+  top: 1px;
+  right: 50%;
+  bottom: 1px;
+  left: 50%;
+  height: 100%;
+  width: 1px;
+  transform: scale(1, 2);
+  transform-origin: 50% -100%;
+  background-color: rgba(0, 0, 0, 0.25);
+  z-index: -1;
+}
+.step:last-child .circle:after {
+  display: none
+}
+
+/* Stepper Titles */
+.title {
+  line-height: 1.5em;
+  font-weight: bold;
+}
+.caption {
+  font-size: 0.8em;
+}
