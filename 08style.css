@@ -1,4 +1,5 @@
 body {
+<<<<<<< HEAD
     background-image: linear-gradient(to top, #ecedee 0%, #eceeef 75%, #e7e8e9 100%);
     min-height: 100vh;
     font: normal 16px sans-serif;
@@ -63,3 +64,29 @@ body {
         border-radius: 0;
     }
 }
+=======
+	padding-top: 70px;
+}
+
+.jumbotron {
+	color: #284738;
+	background: #dce2df;
+}
+
+.navbar-inverse {
+	background: #284738;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+	color: #e0fff0;
+}
+
+.navbar-inverse .navbar-brand {
+	color: #e0fff0;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+>>>>>>> e463db5568c5e3a09215c3c84f99083f8256f959
