@@ -58,3 +58,17 @@ function deleteItem(e){
     }
 
 }
+
+function createNewElement(){
+    var li = document.createElement('li');
+    var collectionItem = document.getElementById("collectionItem").nodeValue;
+    var textNode = document.createTextNode(collectionItem);
+    li appendChild(textNode);
+    
+    if(collectionItem === ''){
+        alert("Hey this cannot be empty")
+    } else {
+        document.getElementById("collectionItem").appendChild(li);
+    }
+    
+}
