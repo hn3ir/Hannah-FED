@@ -13,11 +13,26 @@ const clearBtn = document.querySelector('.clear-tasks');
 const filter = document.querySelector('#filter');
 const taskInput = document.querySelector('#task');
 
+
+
 // load all event listeners in one function
 loadEventListener();
 
 function loadEventListener(){
     form.addEventListener('submit', addTask);
+    addTaskButton.addEventListener("click", () => {
+	    let taskItem = document.createElement("li");
+	    taskItem.textContent = addTaskInput.value;
+	    taskList.appendChild(taskItem);
+	    addTaskInput.value = " ";
+	});
+
+	document.onclick = function(e)
+	{
+	  if(e.target.tagName == 'LI'){
+	     e.target.remove();
+	   }
+	}
 
     // remove task event
     taskList.addEventListener('click', removeTask);
