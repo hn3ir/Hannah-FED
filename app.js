@@ -82,6 +82,9 @@ function addTask(e){
 function removeTask(e){
 
 }
+removeTask.addEventListener('click', function(e) {
+        node.parentNode.removeChild(node);
+    });
 
 // clear asks
 function clearTask(e){
