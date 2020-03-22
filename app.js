@@ -5,6 +5,7 @@
 //
 //
 
+
 const form = document.querySelector('#task-form');
 const taskList = document.querySelector('.collection');
 const clearBtn = document.querySelector('.clear-tasks');
@@ -16,7 +17,7 @@ loadEventListener();
 
 function loadEventListener(){
     form.addEventListener('submit', addTask);
-
+    
     // remove task event
     taskList.addEventListener('click', removeTask);
     // click event becaue you are clicking that button
@@ -56,22 +57,29 @@ function addTask(e){
         // clear input
         taskInput.value = '';
 
+
+        
     console.log(li);
     console.log(link);
     e.preventDefault();
 }
 
 // remove tasks
+
 function removeTask(e){
+    var ulElem = document.getElementById('.collection-item');
 
-}
+      }
 
-// clear asks
+
+// clear tasks
 function clearTask(e){
-
+    var parent = this.parentElement.parentElement;
+    parent.removeChild(this.parentElement);
 }
 
 // filter tasks
 function filterTask(e){
 
 }
+

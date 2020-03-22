@@ -147,7 +147,7 @@ nav.navbar-default .navbar-nav li a.active:hover {
 
 
 header {
-    min-height: 80%;
+    min-height: 100%;
     background-position: center center;
     background-size: 100%;
     background-repeat: no-repeat;
@@ -468,7 +468,7 @@ h1 {
   box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.08), 0 3px 6px 0 rgba(0, 0, 0, 0.03);
   border-right: 1px #dde0e2 solid;
   border-radius: 4px 4px 0 0;
-  position: relative;
+  position: center;
   background-color: white;
   color: #56575b;
   margin: 5px 0;
