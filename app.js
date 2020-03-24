@@ -97,7 +97,7 @@ function removeTask(e){
 =======
 }
 removeTask.addEventListener('click', function(e) {
-        node.parentNode.removeChild(node);
+        node.parentNode.removeChild('li');
     });
 >>>>>>> 1d0a12c65867d893df252630c821cd5dac1fb749
 
