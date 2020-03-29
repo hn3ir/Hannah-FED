@@ -1,0 +1,184 @@
+
+
+
+
+main {
+  display: grid;
+  /* grid-template-columns: 1fr repeat(12, minmax(auto, 60px)) 1fr; */
+  grid-gap: 40px;
+  padding: 130px
+}
+
+
+nav a {
+  text-decoration: none;
+}
+/* 
+.text--medium  {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 10px;
+  line-height: 10px;
+  font-weight: 400;
+  color: blue;
+}
+
+
+
+
+.cards {
+  grid-column: 2 / span 12;
+  display: grid;
+  grid-template-columns: 1fr repeat(12, minmax(auto, 60px));
+  grid-gap: 40px
+}
+
+.card {
+  grid-column-end: span 4;
+  display: flex;
+  flex-direction: column;
+  background-color: #cccccc;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+.card_image-container {
+  width: 100%;
+  padding-top: 56%;
+  overflow: hidden;
+  position: relative;
+}
+
+.card_image-container img {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.card_content {
+  padding: 10px;
+}
+
+.card-title {
+  margin-bottom: 20px;
+}
+
+.card-info: {
+  display: flex;
+}
+ */
+
+
+
+.carousel-caption {
+    position: absolute;
+    left: 0;
+    width: 50%;
+    top: 3%;
+    margin-left: 15%;
+    text-align: left;
+}
+
+.carousel-caption h5 {
+    font-size: 5em;
+}
+
+
+.carousel-inner {
+    max-height: 600px;
+    width: auto;
+    padding: 30px;
+}
+
+
+.container {
+padding: 100px;
+}
+
+.jumbotron {
+  padding: 150px;
+  background-image: url("images/banner.jpg");
+  background-size: 1200px;
+  margin: 10px;
+  transition: 1000ms;
+}
+
+.jumbotron:hover {
+  background-image: url("images/banner.jpg");
+  transition: 1000ms;
+}
+
+.inner {
+  overflow: hidden;
+
+}
+
+.inner img{
+  transition: all 1.5s ease;
+}
+
+.inner:hover img{
+  transform: scale(1.5);
+}
+
+
+#line {
+  float: left;
+  width: 731px;
+  height: 10px;
+  color: black;
+  justify-content: center;
+}
+
+hr
+{
+border:solid 1px black;
+width: 96%;
+color: #FFFF00;
+height: 1px;
+align-content: center;
+}
+
+
+
+
+/* position: absolute;
+left: 0;
+width: 50%;
+top: 2%;
+maring-left: 15%; */
+
+
+/* .carousel {
+    position: relative;
+    padding: 1%;
+    filter: drop-shadow(0 0 10px #0003);
+    perspective: 70px;
+    
+  } */
+/*   
+  .carousel__viewport {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    overflow-x: scroll;
+    counter-reset: item;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+  }
+  
+  .carousel__slide {
+    position: relative;
+    flex: 0 0 100%;
+    width: 100%;
+    background-color: #f99;
+    counter-increment: item;
+  } */
+
+  #navbar :focus {
+    outline: none;
+}

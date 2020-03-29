@@ -18,32 +18,37 @@ const taskInput = document.querySelector('#task');
 loadEventListener();
 
 function loadEventListener() {
-    form.addEventListener('submit', addTask); <<
-    <<
-    << < HEAD
-
-        ===
-        ===
-        =
-        addTaskButton.addEventListener("click", () => {
-            let taskItem = document.createElement("li");
-            taskItem.textContent = addTaskInput.value;
-            taskList.appendChild(taskItem);
-            addTaskInput.value = " ";
-        });
+    form.addEventListener('submit', addTask);
+    addTaskButton.addEventListener("click", () => {
+        let taskItem = document.createElement("li");
+        taskItem.textContent = addTaskInput.value;
+        taskList.appendChild(taskItem);
+        addTaskInput.value = " ";
+    });
 
     document.onclick = function (e) {
-            if (e.target.tagName == 'LI') {
-                e.target.remove();
-            }
+        if (e.target.tagName == 'LI') {
+            e.target.remove();
         }
+    }
 
-        >>>
-        >>>
-        > 1 d0a12c65867d893df252630c821cd5dac1fb749
     // remove task event
     taskList.addEventListener('click', removeTask);
     // click event becaue you are clicking that button
+
+    function removeTask(e) {
+        var ul = document.querySelector('.tasks');
+        var listLength = ul.children.length;
+
+        while (ul.children.length != 0) {
+            ul.removeChild(ul.childNodes[0]);
+        }
+
+        // this works
+        // ul.innerHTML = "";
+
+    }
+    removeTask(e);
 
     // clear tasks event
     clearBtn.addEventListener('click', clearTask);
@@ -89,22 +94,41 @@ function addTask(e) {
 
 // remove tasks
 
-function removeTask(e) {
-    var ulElem = document.getElementById('.collection-item');
+function removeItem(e) {
+    e.target.parentElement.removeChild(e.target);
+}
 
 
-    removeTask.addEventListener('click', function (e) {
-        node.parentNode.removeChild('li');
-    });
+// clear tasks
+function clearTask(e) {
+    var parent = this.parentElement.parentElement;
+    parent.removeChild(this.parentElement);
+}
+
+// filter tasks
+function filterTask(e) {
+
+}
 
 
-    // clear tasks
-    function clearTask(e) {
-        var parent = this.parentElement.parentElement;
-        parent.removeChild(this.parentElement);
+
+
+function newItem() {
+    var item = document.getElementById("task").value;
+    var ul = document.getElementById("list");
+    var li = document.createElement("li");
+    li.appendChild(document.createTextNode("- " + item));
+    ul.appendChild(li);
+    document.getElementById("input").value = "";
+    li.onclick = removeItem;
+}
+
+document.body.onkeyup = function (e) {
+    if (e.keyCode == 13) {
+        newItem();
     }
+};
 
-    // filter tasks
-    function filterTask(e) {
-
-    }
+function removeItem(e) {
+    e.target.parentElement.removeChild(e.target);
+}

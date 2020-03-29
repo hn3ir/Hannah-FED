@@ -1,0 +1,19 @@
+
+/* position: absolute;
+left: 0;
+width: 50%;
+top: 2%;
+maring-left: 15%; */
+
+.carousel-caption {
+    position: absolute;
+    left: 0;
+    width: 50%;
+    top: 2%;
+    margin-left: 15%;
+    text-align: left;
+}
+
+.carousel-caption h5 {
+    font-size: 5em;
+}

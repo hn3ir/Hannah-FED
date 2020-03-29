@@ -1,0 +1,62 @@
+
+.carousel-caption {
+    position: absolute;
+    left: 0;
+    width: 50%;
+    top: 3%;
+    margin-left: 15%;
+    text-align: left;
+}
+
+.carousel-caption h5 {
+    font-size: 5em;
+}
+
+
+.carousel-inner {
+    max-height: 600px;
+    width: auto;
+}
+
+
+.container {
+padding: 100px;
+}
+
+
+
+/* position: absolute;
+left: 0;
+width: 50%;
+top: 2%;
+maring-left: 15%; */
+
+
+/* .carousel {
+    position: relative;
+    padding: 1%;
+    filter: drop-shadow(0 0 10px #0003);
+    perspective: 70px;
+    
+  } */
+/*   
+  .carousel__viewport {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    overflow-x: scroll;
+    counter-reset: item;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+  }
+  
+  .carousel__slide {
+    position: relative;
+    flex: 0 0 100%;
+    width: 100%;
+    background-color: #f99;
+    counter-increment: item;
+  } */
